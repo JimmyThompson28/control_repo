@@ -5,7 +5,7 @@ class minecraft {
   file {'/opt/minecraft/server.jar':
     ensure => file,
     source => 'https://launcher.mojang.com/v1/objects/c8f83c5655308435b3dcf03c06d9fe8740a77469/server.jar',
-    before => Service ['minecraft'],
+    before => Service['minecraft'],
   }
   package {'java':
     ensure => present,
